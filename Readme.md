@@ -47,3 +47,31 @@
 ```
 
 ### Получение информации о пользователе
+
+Возвращает информацию о пользователе с указанным *username*. Если пользователя с указанным *username* не существует, то возвращает ошибку.
+
+**Метод запроса:** GET
+
+**URL запроса:** api/user/info
+
+**Заголовок запроса**: токен сессии пользователя
+
+**Тело запроса:**
+```
+{
+    "username": "value"
+}
+```
+
+**Тело ответа:**
+```
+{
+    "username": "value",
+    "friendsCount": value,
+    "visitedEventsCount": value,
+    "upcomingEventsCount": value,
+    "friendsIds": ["value1", "value2", "value3"],
+    "visitedEventsIds": ["value1", "value2", "value3"],
+    "upcomingEventsIds": ["value1", "value2", "value3"]
+}
+```
